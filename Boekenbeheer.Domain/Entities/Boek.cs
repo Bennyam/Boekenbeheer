@@ -10,6 +10,8 @@ public class Boek
     public DateTime PublicatieDatum { get; private set; }
     public bool IsUitgeleend { get; private set; } = false;
 
+    private Boek() { }
+
     public Boek(string titel, string auteur, string isbn, int aantalPaginas, DateTime publicatieDatum)
     {
         if (string.IsNullOrWhiteSpace(titel))

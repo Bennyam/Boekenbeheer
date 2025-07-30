@@ -6,3 +6,7 @@ obj/
 *.log
 .idea/
 TestResults/
+
+# SQLite database
+*.db
+*.db-journal
