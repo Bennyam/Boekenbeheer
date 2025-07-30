@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boekenbeheer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>📚 Boekenbeheer</h1>
+
+      <section>
+        <h2>Nieuw boek toevoegen</h2>
+        <form id="boek-form">
+          <input type="text" id="titel" placeholder="Titel" required />
+          <input type="text" id="auteur" placeholder="Auteur" required />
+          <input type="text" id="isbn" placeholder="ISBN" required />
+          <input
+            type="number"
+            id="paginas"
+            placeholder="Aantal pagina's"
+            required
+          />
+          <input type="date" id="datum" required />
+          <button type="submit">Toevoegen</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Alle boeken</h2>
+        <ul id="boeken-lijst"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="./app/ui.js"></script>
+  </body>
+</html>

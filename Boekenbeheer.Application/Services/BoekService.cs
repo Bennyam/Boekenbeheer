@@ -33,4 +33,21 @@ public class BoekService
         await _boekRepository.DeleteAsync(id);
         await _boekRepository.SaveChangesAsync();
     }
+
+    public async Task ToggleUitgeleendStatusAsync(Guid id)
+    {
+        var boek = await _boekRepository.GetByIdAsync(id);
+        if (boek == null) return;
+
+        if (boek.IsUitgeleend)
+        {
+            boek.MarkeerAlsBeschikbaar();
+        }
+        else
+        {
+            boek.MarkeerAlsUitgeleend();
+        }
+
+        await _boekRepository.SaveChangesAsync();
+    }
 }
